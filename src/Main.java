@@ -6,8 +6,6 @@ public class Main {
 
         Group student1 = new Group(id, starosta);
         student1.getStudent();
-        student1.changeStudent();
-        student1.deleteStudent();
 
         Group student2 = new Group(id, starosta);
         student2.getStudent2();
@@ -18,6 +16,9 @@ public class Main {
         Group studentNew = new Group(id, starosta);
         studentNew.addStudent();
         studentNew.isDone();
+
+        student1.changeStudent();
+        student1.deleteStudent();
 
     }
 }
