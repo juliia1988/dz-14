@@ -1,23 +1,30 @@
+import java.awt.*;
+
 public class Main {
     public static void main(String[] args) {
 
-        byte id = 0;
-        boolean starosta = false;
+        Student student1 = new Student("Yuliia", "Sokolova");
+        Student student2 = new Student("Olena", "Voloshyna");
 
-        Group student1 = new Group(id, starosta);
-        student1.getStudent();
-        student1.changeStudent();
-        student1.deleteStudent();
+        Group groupOfStudents = new Group();
+        groupOfStudents.addStudent(student1);
+        groupOfStudents.addStudent(student2);
 
-        Group student2 = new Group(id, starosta);
-        student2.getStudent2();
+        groupOfStudents.printGroup(student1);
+        groupOfStudents.printGroup(student2);
 
-        Group student3 = new Group(id, starosta);
-        student3.getStudent3();
+        groupOfStudents.setTask("Task 1");
 
-        Group studentNew = new Group(id, starosta);
-        studentNew.addStudent();
-        studentNew.isDone();
+
+        Group starosta = new Group();
+        starosta.setStarosta(student1);
+        student1.setName("Ekaterina");
+
+        Group taskIsDone = new Group();
+        taskIsDone.addStudent(student1);
+        taskIsDone.setTask("Task is Done");
+
+        groupOfStudents.removeStudent(student1);
 
     }
 }
