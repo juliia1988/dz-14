@@ -1,19 +1,27 @@
-import java.awt.*;
-
 public class Student {
-    public Student(Object name, Object lastname, Object starosta) {
+
+    private String name;
+    private String lastname;
+
+    public Student(String name, String lastname) {
+        this.name = name;
+        this.lastname = lastname;
     }
 
-    public void getStudentId() {
-        int ID = newID();
+    public String getName() {
+        return name;
     }
 
-    private int newID() {
-        return 0;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getTask() {
-        String task;
-        return null;
+    public String getLastname() {
+        return lastname;
     }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
 }
